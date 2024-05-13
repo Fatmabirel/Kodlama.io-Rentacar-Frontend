@@ -1,0 +1,10 @@
+<table class="table table-striped">
+    <tr>
+        <td>#</td>
+        <td>Müşteri adı</td>
+    </tr>
+    <tr *ngFor="let customer of customers">
+        <td>{{ customer.userId }}</td>
+        <td>{{ customer.companyName }}</td>
+      </tr>
+</table>
