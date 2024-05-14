@@ -1,11 +1,33 @@
 <div class="container">
   <app-navi></app-navi>
-  <br/>
-  <app-brand></app-brand>
-  <app-color></app-color>
-  <app-customer></app-customer>
-  <app-car></app-car>
-  <app-rental></app-rental>
+  <div class="mb-4"></div> <!-- Üstte boşluk bırakmak için -->
+ 
+  <div class="row">
+    <div class="col-md-2 text-center"> 
+      <h4 class="bg-primary text-white py-2 mb-2 rounded">Brands</h4> 
+      <app-brand></app-brand>
+    </div>
+    <div class="col-md-10">
+      <app-car></app-car>
+    </div>
+  </div>
+  <div class="mb-4"></div> 
+  <div class="row">
+    <div class="col-md-2 text-center"> 
+      <h4 class="bg-secondary text-white py-2 mb-2 rounded">Customers</h4> 
+      <app-customer></app-customer>
+    </div>
+    <div class="col-md-10">
+      <app-rental></app-rental>
+    </div>
+  </div>
+  <div class="mb-4"></div> 
+  <div class="row">
+    <div class="col-md-2 text-center">
+      <h4 class="bg-success text-white py-2 mb-2 rounded">Colors</h4> 
+      <app-color></app-color>
+    </div>
+  </div>
 </div>
 
 <router-outlet></router-outlet>

@@ -1,10 +1,5 @@
-<table class="table table-striped">
-    <tr>
-        <td>#</td>
-        <td>Renk adı</td>
-    </tr>
-    <tr *ngFor="let color of colors">
-        <td>{{ color.colorId }}</td>
-        <td>{{ color.name }}</td>
-      </tr>
-</table>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let color of colors">
+    {{ color.name }}
+  </li>
+</ul>

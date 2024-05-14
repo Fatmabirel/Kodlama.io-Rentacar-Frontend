@@ -1,16 +1,21 @@
 <table class="table">
-  <tr>
-    <td>#</td>
-    <td>Car Name</td>
-    <td>Customer Name</td>
-    <td>Rent Date</td>
-    <td>Return Date</td>
-  </tr>
-  <tr *ngFor="let rental of rentals">
-    <td>{{ rental.id }}</td>
-    <td>{{ getBrandName(rental.carId) }}</td>
-    <td>{{ getCustomerName(rental.customerId) }}</td>
-    <td>{{ rental.rentDate }}</td>
-    <td>{{ rental.returnDate }}</td>
-  </tr>
+  <thead class="table-danger">
+    <tr>
+      <th>#</th>
+      <th>Car Name</th>
+      <th>Customer Name</th>
+      <th>Rent Date</th>
+      <th>Return Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let rental of rentals">
+      <td>{{ rental.id }}</td>
+      <td>{{ getBrandName(rental.carId) }}</td>
+      <td>{{ getCustomerName(rental.customerId) }}</td>
+      <td>{{ rental.rentDate }}</td>
+      <td *ngIf="rental.returnDate; else notReturned">{{ rental.returnDate }}</td>
+      <ng-template #notReturned>not returned</ng-template>
+    </tr>
+  </tbody>
 </table>

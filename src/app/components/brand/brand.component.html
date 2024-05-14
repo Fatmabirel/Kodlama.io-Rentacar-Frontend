@@ -1,12 +1,3 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-    </tr>
-  </thead>
-  <tr *ngFor="let brand of brands">
-    <td>{{ brand.brandId }}</td>
-    <td>{{ brand.name }}</td>
-  </tr>
-</table>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let brand of brands">{{ brand.name }}</li>
+</ul>
