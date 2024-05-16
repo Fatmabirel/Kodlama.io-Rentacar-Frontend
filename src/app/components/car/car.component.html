@@ -1,23 +1,24 @@
 <table class="table">
-    <thead class="table-primary">
-      <tr>
-        <th>#</th>
-        <th>Brand</th>
-        <th>Color</th>
-        <th>Year</th>
-        <th>Price</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let car of cars">
-        <td>{{ car.carId }}</td>
-        <td>{{ getBrandName(car.brandId) }}</td>
-        <td>{{ getColorName(car.colorId) }}</td>
-        <td>{{ car.modelYear }}</td>
-        <td>{{ car.dailyPrice }}</td>
-        <td>{{ car.description }}</td>
-      </tr>
-    </tbody>
-  </table>
-  
+  <thead class="table-primary">
+    <tr>
+      <th>#</th>
+      <th>Brand</th>
+      <th>Color</th>
+      <th>Year</th>
+      <th>Price</th>
+      <th>Name</th>
+      <th>Detail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of cars">
+      <td>{{ car.carId }}</td>
+      <td>{{ getBrandName(car.brandId) }}</td>
+      <td>{{ getColorName(car.colorId) }}</td>
+      <td>{{ car.modelYear }}</td>
+      <td>{{ car.dailyPrice }}</td>
+      <td>{{ car.description }}</td>
+      <td><button routerLink="/car-detail/{{car.carId}}" type="button" class="btn btn-info">Info</button></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,25 @@
+<div *ngIf="carDetails && carDetails.length > 0" class="card mx-auto w-50">
+  <img src="assets/image/car.jpg" class="card-img-top" alt="Car Image">
+  <div class="card-body">
+    <div class="text-center">
+      <hr>
+      <h5 class="card-title">{{ carDetails[0]?.brandName }} {{ carDetails[0]?.description }}</h5>
+      <hr>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <span style="font-weight: bold; color: blue; font-size: larger;">Color: </span> 
+        <span style="font-size: larger;">{{ carDetails[0]?.colorName }}</span>
+      </li>
+      <li class="list-group-item">
+        <span style="font-weight: bold; color: green; font-size: larger;">Daily Price: </span> 
+        <span style="font-size: larger;">{{ carDetails[0]?.dailyPrice }}</span>
+      </li>
+      <li class="list-group-item">
+        <span style="font-weight: bold; color: red; font-size: larger;">Model Year: </span> 
+        <span style="font-size: larger;">{{ carDetails[0]?.modelYear | date:'yyyy' }}</span>
+      </li>
+    </ul>
+    
+  </div>
+</div>

@@ -1,33 +1,32 @@
 <div class="container">
   <app-navi></app-navi>
-  <div class="mb-4"></div> <!-- Üstte boşluk bırakmak için -->
- 
+  <div class="mb-4"></div>
+  <!-- Üstte boşluk bırakmak için -->
+
   <div class="row">
-    <div class="col-md-2 text-center"> 
-      <h4 class="bg-primary text-white py-2 mb-2 rounded">Brands</h4> 
+    <div class="col-md-2 text-center">
+      <h4 routerLink="cars" class="bg-primary text-white py-2 mb-2 rounded">Brands</h4>
       <app-brand></app-brand>
     </div>
     <div class="col-md-10">
-      <app-car></app-car>
+      <router-outlet></router-outlet>
     </div>
   </div>
-  <div class="mb-4"></div> 
+  <div class="mb-4"></div>
   <div class="row">
-    <div class="col-md-2 text-center"> 
-      <h4 class="bg-secondary text-white py-2 mb-2 rounded">Customers</h4> 
+    <div class="col-md-2 text-center">
+      <h4 routerLink="cars" class="bg-success text-white py-2 mb-2 rounded">Colors</h4>
+      <app-color></app-color>
+    </div>
+  </div>
+  <div class="mb-4"></div>
+  <div class="row">
+    <div class="col-md-2 text-center">
+      <h4 class="bg-secondary text-white py-2 mb-2 rounded">Customers</h4>
       <app-customer></app-customer>
     </div>
     <div class="col-md-10">
       <app-rental></app-rental>
     </div>
   </div>
-  <div class="mb-4"></div> 
-  <div class="row">
-    <div class="col-md-2 text-center">
-      <h4 class="bg-success text-white py-2 mb-2 rounded">Colors</h4> 
-      <app-color></app-color>
-    </div>
-  </div>
 </div>
-
-<router-outlet></router-outlet>

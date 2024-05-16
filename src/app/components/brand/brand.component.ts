@@ -9,6 +9,7 @@ import { Brand } from '../../models/brands';
 })
 export class BrandComponent {
   brands: Brand[] = [];
+  currentBrand: Brand;
   constructor(private BrandService: BrandService) {}
 
   ngOnInit(): void {
@@ -20,6 +21,15 @@ export class BrandComponent {
       this.brands = response.data;
     });
   }
+  setCurrentBrand(brand: Brand){
+    this.currentBrand = brand;
+  }
 
-  
+  getCurrentBrandClass(brand:Brand){
+    if(brand == this.currentBrand){
+      return "list-group-item list-group-item-primary"
+    }else{
+      return "list-group-item"
+    }
+  }
 }

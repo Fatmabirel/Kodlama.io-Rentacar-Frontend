@@ -9,6 +9,7 @@ import { ColorService } from '../../services/color/color.service';
 })
 export class ColorComponent {
   colors: Color[] = [];
+  currentColor : Color;
 
   constructor(private colorService: ColorService) {}
 
@@ -20,5 +21,16 @@ export class ColorComponent {
     this.colorService.getColors().subscribe((response) => {
       this.colors = response.data;
     });
+  }
+  setCurrentColor(color: Color){
+    this.currentColor = color;
+  }
+
+  setCurrentColorClass(color: Color){
+    if(this.currentColor == color){
+      return "list-group-item list-group-item-info"
+    }else{
+      return "list-group-item "
+    }
   }
 }
