@@ -1,11 +1,19 @@
+<div class="mb-3">
+  <input
+    type="text"
+    [(ngModel)]="filterText"
+    class="form-control text-center"
+    id="filterText"
+    placeholder="Search for color"
+  />
+</div>
 <ul class="list-group">
   <li
     (click)="setCurrentColor(color)"
     [class]="setCurrentColorClass(color)"
     routerLink="/cars/color/{{color.colorId}}"
-    *ngFor="let color of colors"
+    *ngFor="let color of colors | colorFilter:filterText"
   >
     {{ color.name }}
   </li>
 </ul>
-<h5 *ngIf="currentColor">{{ currentColor.name }} seçtiniz</h5>

@@ -1,9 +1,18 @@
+<div class="mb-3">
+  <input
+    type="text"
+    [(ngModel)]="filterText"
+    class="form-control text-center"
+    id="filterText"
+    placeholder="Search for brand"
+  />
+</div>
 <ul class="list-group">
   <li
     (click)="setCurrentBrand(brand)"
     routerLink="/cars/brand/{{ brand.brandId }}"
     [class]="getCurrentBrandClass(brand)"
-    *ngFor="let brand of brands"
+    *ngFor="let brand of brands | brandFilter:filterText"
   >
     {{ brand.name }}
   </li>

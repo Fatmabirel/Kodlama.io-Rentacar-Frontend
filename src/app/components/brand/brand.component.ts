@@ -10,6 +10,7 @@ import { Brand } from '../../models/brands';
 export class BrandComponent {
   brands: Brand[] = [];
   currentBrand: Brand;
+  filterText:string = "";
   constructor(private BrandService: BrandService) {}
 
   ngOnInit(): void {

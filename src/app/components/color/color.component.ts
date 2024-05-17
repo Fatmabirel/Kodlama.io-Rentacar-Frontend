@@ -10,6 +10,7 @@ import { ColorService } from '../../services/color/color.service';
 export class ColorComponent {
   colors: Color[] = [];
   currentColor : Color;
+  filterText:string = "";
 
   constructor(private colorService: ColorService) {}
 
