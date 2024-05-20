@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
-import { FormControl,FormGroup,FormBuilder, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  FormBuilder,
+  Validators,
+} from '@angular/forms';
+import { BrandService } from '../../services/brand.service';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-brand-update',
   templateUrl: './brand-update.component.html',
-  styleUrl: './brand-update.component.css'
+  styleUrl: './brand-update.component.css',
 })
 export class BrandUpdateComponent {
-  brandAddForm: FormGroup;
+  brandUpdateForm: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
     private brandService: BrandService,
@@ -15,22 +23,23 @@ export class BrandUpdateComponent {
   ) {}
 
   ngOnInit(): void {
-    this.createBrandAddForm();
+    this.createBrandUpdateForm();
   }
 
-  createBrandAddForm() {
-    this.brandAddForm = this.formBuilder.group({
+  createBrandUpdateForm() {
+    this.brandUpdateForm = this.formBuilder.group({
+      brandId: ['', Validators.required],
       name: ['', Validators.required],
     });
   }
 
-  addBrand() {
-    if (this.brandAddForm.valid) {
-      let brandModel = Object.assign({}, this.brandAddForm.value);
-      this.brandService.addBrand(brandModel).subscribe(
+  updateBrand() {
+    if (this.brandUpdateForm.valid) {
+      let brandModel = Object.assign({}, this.brandUpdateForm.value);
+      this.brandService.updateBrand(brandModel).subscribe(
         (response) => {
           this.toastrService.success(response.message, 'Başarılı');
-          this.router.navigate(['/']);
+          this.router.navigate(['/brands/list']);
         },
         (responseError) => {
           this.toastrService.error(responseError.message, 'Hata');

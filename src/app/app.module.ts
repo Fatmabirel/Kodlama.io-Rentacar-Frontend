@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
 import { BrandAddComponent } from './components/brand-add/brand-add.component';
 import { BrandUpdateComponent } from './components/brand-update/brand-update.component';
+import { BrandListComponent } from './components/brand-list/brand-list.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { BrandUpdateComponent } from './components/brand-update/brand-update.com
     ColorFilterPipe,
     LoginComponent,
     BrandAddComponent,
-    BrandUpdateComponent
+    BrandUpdateComponent,
+    BrandListComponent
   ],
   imports: [
     BrowserModule,
