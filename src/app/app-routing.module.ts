@@ -7,6 +7,7 @@ import { BrandAddComponent } from './components/brand-add/brand-add.component';
 import { BrandUpdateComponent } from './components/brand-update/brand-update.component';
 import { BrandComponent } from './components/brand/brand.component';
 import { BrandListComponent } from './components/brand-list/brand-list.component';
+import { BrandDeleteComponent } from './components/brand-delete/brand-delete.component';
 
 const routes: Routes = [
   {path: "", pathMatch:"full", component:CarComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: "brands/list" , component:BrandListComponent},
   {path: "brands/add" , component:BrandAddComponent},
   {path: "brands/update/:brandId" , component:BrandUpdateComponent},
+  {path: "brands/delete/:brandId" , component:BrandDeleteComponent},
 ];
 
 @NgModule({
