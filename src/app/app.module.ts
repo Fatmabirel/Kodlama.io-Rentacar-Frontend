@@ -19,6 +19,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
+import { BrandAddComponent } from './components/brand-add/brand-add.component';
+import { BrandUpdateComponent } from './components/brand-update/brand-update.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { LoginComponent } from './components/login/login.component';
     CarFilterPipe,
     BrandFilterPipe,
     ColorFilterPipe,
-    LoginComponent
+    LoginComponent,
+    BrandAddComponent,
+    BrandUpdateComponent
   ],
   imports: [
     BrowserModule,

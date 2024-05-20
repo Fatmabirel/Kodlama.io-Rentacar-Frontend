@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { CarComponent } from './components/car/car.component';
 import { CarDetailComponent } from './components/car-detail/car-detail.component';
 import { LoginComponent } from './components/login/login.component';
+import { BrandAddComponent } from './components/brand-add/brand-add.component';
+import { BrandUpdateComponent } from './components/brand-update/brand-update.component';
 
 const routes: Routes = [
   {path: "", pathMatch:"full", component:CarComponent},
@@ -13,6 +15,9 @@ const routes: Routes = [
   {path:'car-detail/:carId',component:CarDetailComponent},
   {path:'rentals/add/:carId',component:CarDetailComponent},
   {path: "login" , component:LoginComponent},
+
+  {path: "brands/add" , component:BrandAddComponent},
+  {path: "brands/update" , component:BrandUpdateComponent},
 ];
 
 @NgModule({
