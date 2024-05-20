@@ -29,5 +29,6 @@ export class CarDetailComponent {
       this.carDetails = [response.data];
       console.log(this.carDetails);
     });
+
   }
 }

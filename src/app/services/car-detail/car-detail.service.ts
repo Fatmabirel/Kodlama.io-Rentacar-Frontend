@@ -11,6 +11,8 @@ import { CarDetailResponseModel } from '../../models/carDetailResponseModel';
 export class CarDetailService {
   apiUrl = 'https://localhost:44343/api/Cars/';
 
+  rentUrl = "https://localhost:44343/api/Rentals/"
+
   constructor(private HttpClient: HttpClient) {}
   
   getCarDetails(): Observable<CarDetailResponseModel> {
@@ -22,4 +24,5 @@ export class CarDetailService {
     let newPath = this.apiUrl + "GetCarDetailsById?carId=" + carId;
     return this.HttpClient.get<CarDetailResponseModel>(newPath);
   }
+
 }

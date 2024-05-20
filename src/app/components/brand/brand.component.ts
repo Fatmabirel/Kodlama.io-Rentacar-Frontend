@@ -33,4 +33,8 @@ export class BrandComponent {
       return "list-group-item"
     }
   }
+
+  addBrand(brand:Brand){
+
+  }
 }

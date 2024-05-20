@@ -88,4 +88,6 @@ export class CarComponent implements OnInit {
     const color = this.colors.find((c) => c.colorId === colorId);
     return color ? color.name : 'Unknown';
   }
+
+  
 }

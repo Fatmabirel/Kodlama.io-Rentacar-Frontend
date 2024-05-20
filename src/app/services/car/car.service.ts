@@ -32,4 +32,5 @@ export class CarService {
     console.log(newPath);
     return this.HttpClient.get<ListResponseModel<Car>>(newPath);
   }
+  
 }
