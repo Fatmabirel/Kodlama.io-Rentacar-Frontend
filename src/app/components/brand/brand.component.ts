@@ -34,7 +34,4 @@ export class BrandComponent {
     }
   }
 
-  addBrand(brand:Brand){
-
-  }
 }

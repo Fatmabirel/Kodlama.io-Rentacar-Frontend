@@ -15,8 +15,10 @@ import { CarFilterPipe } from './pipes/car-filter.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrandFilterPipe } from './pipes/brand-filter.pipe';
 import { ColorFilterPipe } from './pipes/color-filter.pipe';
-import { BrandAddComponent } from './components/brand-add/brand-add.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     CarFilterPipe,
     BrandFilterPipe,
     ColorFilterPipe,
-    BrandAddComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -40,14 +42,12 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     FormsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot({
-      positionClass:"toast-bottom-right"
-      
+      positionClass: 'toast-bottom-right',
     }),
     BrowserAnimationsModule
+  
   ],
-  providers: [
-    provideAnimationsAsync()
-  ],
-  bootstrap: [AppComponent]
+  providers: [provideAnimationsAsync()],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

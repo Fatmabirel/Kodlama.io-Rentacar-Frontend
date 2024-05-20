@@ -9,7 +9,7 @@ import { ResponseModel } from '../models/responseModel';
   providedIn: 'root',
 })
 export class BrandService {
-  apiUrl = 'https://localhost:7076/api/';
+  apiUrl = 'https://localhost:44343/api/';
 
   constructor(private HttpClient: HttpClient) {}
 
