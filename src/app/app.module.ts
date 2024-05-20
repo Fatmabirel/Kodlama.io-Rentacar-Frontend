@@ -23,6 +23,7 @@ import { BrandAddComponent } from './components/brand-add/brand-add.component';
 import { BrandUpdateComponent } from './components/brand-update/brand-update.component';
 import { BrandListComponent } from './components/brand-list/brand-list.component';
 import { BrandDeleteComponent } from './components/brand-delete/brand-delete.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { BrandDeleteComponent } from './components/brand-delete/brand-delete.com
     BrandAddComponent,
     BrandUpdateComponent,
     BrandListComponent,
-    BrandDeleteComponent
+    BrandDeleteComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
